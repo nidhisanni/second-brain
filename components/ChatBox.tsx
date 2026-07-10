@@ -1,12 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useDocument } from "@/context/DocumentContext";
 
 export default function ChatBox() {
   const [message, setMessage] = useState("");
   const [reply, setReply] = useState("");
-
+  const { selectedDocument } = useDocument();
   async function askAI() {
+    if (!selectedDocument) {
+      alert("Please select a document first.");
+      return;
+    }
     const res = await fetch("/api/chat-gemini", {
       method: "POST",
       headers: {
@@ -14,6 +19,7 @@ export default function ChatBox() {
       },
       body: JSON.stringify({
         message,
+        documentId: selectedDocument,
       }),
     });
 

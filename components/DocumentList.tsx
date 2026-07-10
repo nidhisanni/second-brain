@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSupabase } from "@/lib/supabase";
+import { useDocument } from "@/context/DocumentContext";
 
 type Document = {
   id: string;
@@ -11,6 +12,7 @@ type Document = {
 
 export default function DocumentList() {
   const supabase = useSupabase();
+  const { selectedDocument, setSelectedDocument } = useDocument();
   const [documents, setDocuments] = useState<Document[]>([]);
 
   useEffect(() => {
@@ -41,9 +43,14 @@ export default function DocumentList() {
         <div className="space-y-3">
           {documents.map((doc) => (
             <div
-              key={doc.id}
-              className="bg-white p-4 rounded-lg shadow border"
-            >
+            key={doc.id}
+            onClick={() => setSelectedDocument(doc.id)}
+            className={`p-4 rounded-lg shadow border cursor-pointer transition ${
+              selectedDocument === doc.id
+                ? "bg-blue-100 border-blue-500"
+                : "bg-white"
+            }`}
+          >
               <p className="font-semibold">{doc.file_name}</p>
               <p className="text-sm text-gray-500">
                 {new Date(doc.created_at).toLocaleString()}

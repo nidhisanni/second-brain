@@ -7,7 +7,7 @@ export default function ChatBox() {
   const [reply, setReply] = useState("");
 
   async function askAI() {
-    const res = await fetch("/api/chat", {
+    const res = await fetch("/api/chat-gemini", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

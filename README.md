@@ -10,7 +10,7 @@ Upload your documents, search your personal knowledge base, and ask AI questions
 
 🌐 **Live Demo:** https://mindvault-seven-chi.vercel.app
 
-💻 **Repository:** https://github.com/nidhisanni/mindvault-app
+💻 **Repository:** https://github.com/nidhisanni/mindvault.app
 
 </div>
 
@@ -333,7 +333,7 @@ Aspiring Software Development Engineer passionate about building scalable AI-pow
 
 # 📂 Repository
 
-💻 https://github.com/nidhisanni/mindvault-app
+💻 https://github.com/nidhisanni/mindvault.app
 
 ---
 

@@ -10,7 +10,7 @@ Upload your documents, search your personal knowledge base, and ask AI questions
 
 🌐 **Live Demo:** https://mindvault-seven-chi.vercel.app
 
-💻 **Repository:** https://github.com/nidhisanni/second-brain
+💻 **Repository:** https://github.com/nidhisanni/mindvault-app
 
 </div>
 

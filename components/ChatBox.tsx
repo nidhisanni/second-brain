@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { useDocument } from "@/context/DocumentContext";
 
 export default function ChatBox() {
@@ -96,7 +97,9 @@ export default function ChatBox() {
           </div>
 
           <div className="max-h-[420px] overflow-y-auto px-5 py-4 text-[15px] leading-7 text-slate-700 sm:text-base">
-            <div className="whitespace-pre-wrap">{reply}</div>
+          <div className="prose prose-slate max-w-none">
+            <ReactMarkdown>{reply}</ReactMarkdown>
+          </div>
           </div>
         </div>
       )}
